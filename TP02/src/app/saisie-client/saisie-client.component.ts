@@ -53,7 +53,7 @@ export class SaisieClientComponent implements OnInit {
 
   public numberOnly(event): boolean {
     const charCode = (event.which) ? event.which : event.keyCode;
-    if ((charCode > 31 && (charCode < 48 || charCode > 57)) || this.telephone.length === 9) {
+    if ((charCode > 31 && (charCode < 48 || charCode > 57)) || (this.telephone && this.telephone.length === 9)) {
       return false;
     }
     return true;

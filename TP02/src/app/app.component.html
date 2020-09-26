@@ -1,4 +1,4 @@
 <app-tetiere></app-tetiere>
-<app-saisie-client></app-saisie-client>
-<app-recapitulatif-donnee></app-recapitulatif-donnee>
+<app-saisie-client (dataEvent)='updateData($event)'></app-saisie-client>
+<app-recapitulatif-donnee [data]='data'></app-recapitulatif-donnee>
 <app-footer></app-footer>

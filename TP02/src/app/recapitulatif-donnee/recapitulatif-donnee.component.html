@@ -1,6 +1,33 @@
-<ul class="list-group flex-md-row">
-    <li class="list-group-item">item 1</li>
-    <li class="list-group-item">item 2</li>
-    <li class="list-group-item">item 3</li>
-    <li class="list-group-item">item 4</li>
-</ul>
+
+<table class="table elem-center">
+    <thead>
+      <tr class="table-info">
+        <th scope="col">Civilité</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Login</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mot de passe</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Ville</th>
+        <th scope="col">Code postal</th>
+        <th scope="col">Pays</th>
+        <th scope="col">Numéro de téléphone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{data.civilite}}</th>
+        <td>{{data.nom}}</td>
+        <td>{{data.prenom}}</td>
+        <td>{{data.login}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.motDePasse}}</td>
+        <td>{{data.adresse}}</td>
+        <td>{{data.ville}}</td>
+        <td>{{data.codePostal}}</td>
+        <td>{{data.pays.name}}</td>
+        <td>{{data.pays.dial_code}} {{data.telephone | phonepipe:data.pays}}</td>
+      </tr>
+    </tbody>
+  </table>

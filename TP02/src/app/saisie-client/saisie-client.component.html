@@ -28,8 +28,9 @@
           </div>
       <div class="form-group col-md-6">
         <label for="inputEmail4">Email</label>
-        <input name="email" [ngClass]="email === '' ? 'errorField' : ''" [ngModel]="email" (ngModelChange)="email = $event" type="email" class="form-control" id="inputEmail4" required>
+        <input name="email" [ngClass]="email === '' || falseEmail ? 'errorField' : ''" [ngModel]="email" (ngModelChange)="checkEmail($event)" type="email" class="form-control" id="inputEmail4" required>
         <span *ngIf="email === ''" class="badge badge-pill badge-danger">Ce champ est requis</span>
+        <span *ngIf="falseEmail" class="badge badge-pill badge-danger">Mauvaise syntaxe</span>
       </div>
     </div>
     <div class="form-row">
@@ -40,7 +41,7 @@
       </div>
       <div class="form-group col-md-6">
         <label for="inputConfirmPassword4">Confirmation du mot de passe</label>
-        <input name="confirm" type="password" [ngClass]="confirm === '' ? 'errorField' : ''" [ngModel]="confirm" (ngModelChange)="confirm = $event" class="form-control" id="inputConfirmPassword4" required>
+        <input name="confirm" type="password" [ngClass]="confirm === '' || motDePasse !== confirm ? 'errorField' : ''" [ngModel]="confirm" (ngModelChange)="confirm = $event" class="form-control" id="inputConfirmPassword4" required>
         <span *ngIf="motDePasse !== confirm" class="badge badge-pill badge-danger">Mots de passe différents</span>
         <span *ngIf="motDePasse === confirm && confirm === ''" class="badge badge-pill badge-danger">Ce champ est requis</span>
       </div>
@@ -73,12 +74,11 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-sm">{{pays.dial_code}}</span>
           </div>
-          <input name="telephone" [ngClass]="telephone === '' ? 'errorField' : ''" [ngModel]="telephone" (ngModelChange)="telephone = $event" id="inputPhone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" pattern="[0-9]{1} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}">
+          <input name="telephone" [ngClass]="telephone === '' ? 'errorField' : ''" [ngModel]="telephone" (ngModelChange)="telephone = $event" id="inputPhone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" (keypress)="numberOnly($event)" required>
         </div>
-        <div>{{telephone | phonepipe:pays}}</div>
         <span *ngIf="telephone === ''" class="badge badge-pill badge-danger">Ce champ est requis</span>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Créer</button>
+    <button type="submit" class="btn btn-primary" [disabled]="checkValues()">Créer</button>
   </form>
 </div>

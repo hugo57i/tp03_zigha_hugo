@@ -11,3 +11,7 @@
     padding: 10px;
     border-radius: 10px;
 }
+
+.errorField {
+    border-color: #dc3545 ;
+}

@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SaisieClientComponent } from './saisie-client/saisie-client.component';
 import { RecapitulatifDonneeComponent } from './recapitulatif-donnee/recapitulatif-donnee.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PhonepipePipe } from './phonepipe.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TetiereComponent,
     FooterComponent,
     SaisieClientComponent,
-    RecapitulatifDonneeComponent
+    RecapitulatifDonneeComponent,
+    PhonepipePipe
   ],
   imports: [
     BrowserModule,

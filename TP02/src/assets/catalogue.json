@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "nom": "Lampe led bande 5M",
+        "prix": 20,
+        "type": "Design",
+        "categorie": "Lampe",
+        "pathImg": "/img/lampeLed.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Lampe de table",
+        "prix": 10,
+        "type": "Design",
+        "categorie": "Lampe",
+        "pathImg": "/img/lampeDeTable.jpg"
+    },
+    {
+        "id": 3,
+        "nom": "Horloge led",
+        "prix": 10,
+        "type": "Design",
+        "categorie": "Horloge",
+        "pathImg": "/img/horlogeLed.jpg"
+    },
+    {
+        "id": 4,
+        "nom": "Horloge originale",
+        "prix": 25,
+        "type": "Design",
+        "categorie": "Horloge",
+        "pathImg": "/img/horlogeOriginale.jpg"
+    },
+    {
+        "id": 5,
+        "nom": "Scanner 3D",
+        "prix": 350,
+        "type": "Office",
+        "categorie": "Scanner",
+        "pathImg": "/img/scanner3D.jpg"
+    },
+    {
+        "id": 6,
+        "nom": "Scanner classique",
+        "prix": 40,
+        "type": "Office",
+        "categorie": "Scanner",
+        "pathImg": "/img/scannerEpson.jpg"
+    },
+    {
+        "id": 7,
+        "nom": "Imprimante 3D",
+        "prix": 320,
+        "type": "Office",
+        "categorie": "Imprimante",
+        "pathImg": "/img/imprimante3D.jpg"
+    },
+    {
+        "id": 8,
+        "nom": "Imprimante HP Multifonction",
+        "prix": 80,
+        "type": "Office",
+        "categorie": "Imprimante",
+        "pathImg": "/img/imprimanteMultifonctionHP.jpg"
+    },
+    {
+        "id": 9,
+        "nom": "Jbl Charge 2+ Noir",
+        "prix": 140,
+        "type": "Multimedia",
+        "categorie": "Enceinte portable",
+        "pathImg": "/img/jblCharge2+.jpg"
+    },
+    {
+        "id": 10,
+        "nom": "Jbl Xtreme noir",
+        "prix": 300,
+        "type": "Multimedia",
+        "categorie": "Enceinte portable",
+        "pathImg": "/img/jblXtreme.jpg"
+    },
+    {
+        "id": 11,
+        "nom": "Playstation 4 PRO",
+        "prix": 450,
+        "type": "Multimedia",
+        "categorie": "Console de jeu",
+        "pathImg": "/img/ps4Pro+.jpg"
+    },
+    {
+        "id": 12,
+        "nom": "Xbox One",
+        "prix": 250,
+        "type": "Multimedia",
+        "categorie": "Console de jeu",
+        "pathImg": "/img/xboxOne.jpg"
+    }
+]

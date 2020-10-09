@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { SidebarModule } from 'ng-sidebar';
+import { Ng5SliderModule } from 'ng5-slider';
 
 import { AppComponent } from './app.component';
 import { TetiereComponent } from './tetiere/tetiere.component';
@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    SidebarModule.forRoot()
+    Ng5SliderModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

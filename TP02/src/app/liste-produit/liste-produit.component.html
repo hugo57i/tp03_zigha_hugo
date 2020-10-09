@@ -1,18 +1,27 @@
-<div [ngStyle]="{'display': 'flex'}">
-    <div>
-        <ng-sidebar-container [ngStyle]="{'height': '100%', 'width': '200px', 'background-color': '#e3f2fd'}">
-    
-        <!-- A sidebar -->
-        <ng-sidebar [opened]="showSideBar">
-        
-        </ng-sidebar>
-
-        </ng-sidebar-container>
-    </div>
-    <div>
+<div [ngStyle]="{'display': 'flex', 'width': '100%'}">
+    <div [ngStyle]="{'width': '100%'}">
         <h2 class="title">Catalogue</h2>
+        <div class="filter">
+            <div class="element">
+                <label for="selectCategory">Filtrer par catégorie :</label>
+                <select class="form-control" id="selectCategory" (change)="onCategoryChanged($event)">
+                    <option selected value="Aucune">Aucune</option>
+                    <option *ngFor="let category of categories">{{category}}</option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="selectType">Filtrer par type :</label>
+                <select class="form-control" id="selectType" (change)="onTypeChanged($event)">
+                    <option selected value="Aucune">Aucune</option>
+                    <option *ngFor="let type of types">{{type}}</option>
+                </select>
+            </div>
+            <div class="element">
+                <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" ></ng5-slider>
+            </div>
+        </div>
         <div class="card-deck row d-flex justify-content-start ml-3 mt-4">
-            <app-card *ngFor="let product of products" [product]="product" ></app-card>
+            <app-card *ngFor="let product of showedProducts" [product]="product" ></app-card>
         </div>
     </div>
 </div>

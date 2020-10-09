@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import countrydata from '../../assets/country.json';
 
 @Component({
@@ -24,7 +24,23 @@ export class SaisieClientComponent implements OnInit {
   public pays: any = countrydata[0];
   public telephone: string;
 
-  @Output() dataEvent = new EventEmitter();
+  public data: any = {
+    civilite: '',
+    nom: '',
+    prenom: '',
+    login: '',
+    email: '',
+    motDePasse: '',
+    adresse: '',
+    ville: '',
+    codePostal: '',
+    pays: {
+      name: '',
+      dial_code: '',
+      code: ''
+    },
+    telephone: ''
+  };
 
   constructor() { }
 
@@ -75,7 +91,7 @@ export class SaisieClientComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    const data = {
+    this.data = {
       civilite: this.civilite,
       nom: this.nom,
       prenom: this.prenom,
@@ -89,7 +105,6 @@ export class SaisieClientComponent implements OnInit {
       telephone: this.telephone
     };
     this.clearInputs();
-    this.dataEvent.emit(data);
   }
 
 }

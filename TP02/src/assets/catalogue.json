@@ -5,7 +5,7 @@
         "prix": 20,
         "type": "Design",
         "categorie": "Lampe",
-        "pathImg": "/img/lampeLed.jpg"
+        "pathImg": "assets/img/lampeLed.jpg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "prix": 10,
         "type": "Design",
         "categorie": "Lampe",
-        "pathImg": "/img/lampeDeTable.jpg"
+        "pathImg": "assets/img/lampeDeTable.jpg"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "prix": 10,
         "type": "Design",
         "categorie": "Horloge",
-        "pathImg": "/img/horlogeLed.jpg"
+        "pathImg": "assets/img/horlogeLed.jpg"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "prix": 25,
         "type": "Design",
         "categorie": "Horloge",
-        "pathImg": "/img/horlogeOriginale.jpg"
+        "pathImg": "assets/img/horlogeOriginale.jpg"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "prix": 350,
         "type": "Office",
         "categorie": "Scanner",
-        "pathImg": "/img/scanner3D.jpg"
+        "pathImg": "assets/img/scanner3D.jpg"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "prix": 40,
         "type": "Office",
         "categorie": "Scanner",
-        "pathImg": "/img/scannerEpson.jpg"
+        "pathImg": "assets/img/scannerEpson.jpg"
     },
     {
         "id": 7,
@@ -53,15 +53,15 @@
         "prix": 320,
         "type": "Office",
         "categorie": "Imprimante",
-        "pathImg": "/img/imprimante3D.jpg"
+        "pathImg": "assets/img/imprimante3D.jpg"
     },
     {
         "id": 8,
-        "nom": "Imprimante HP Multifonction",
+        "nom": "Imprimante Multifonction",
         "prix": 80,
         "type": "Office",
         "categorie": "Imprimante",
-        "pathImg": "/img/imprimanteMultifonctionHP.jpg"
+        "pathImg": "assets/img/imprimanteMultifonctionHP.jpg"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "prix": 140,
         "type": "Multimedia",
         "categorie": "Enceinte portable",
-        "pathImg": "/img/jblCharge2+.jpg"
+        "pathImg": "assets/img/jblCharge2+.jpg"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "prix": 300,
         "type": "Multimedia",
         "categorie": "Enceinte portable",
-        "pathImg": "/img/jblXtreme.jpg"
+        "pathImg": "assets/img/jblXtreme.jpg"
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "prix": 450,
         "type": "Multimedia",
         "categorie": "Console de jeu",
-        "pathImg": "/img/ps4Pro+.jpg"
+        "pathImg": "assets/img/ps4Pro.jpg"
     },
     {
         "id": 12,
@@ -93,6 +93,6 @@
         "prix": 250,
         "type": "Multimedia",
         "categorie": "Console de jeu",
-        "pathImg": "/img/xboxOne.jpg"
+        "pathImg": "assets/img/xboxOne.jpg"
     }
 ]

@@ -1,0 +1,18 @@
+<div [ngStyle]="{'display': 'flex'}">
+    <div>
+        <ng-sidebar-container [ngStyle]="{'height': '100%', 'width': '200px', 'background-color': '#e3f2fd'}">
+    
+        <!-- A sidebar -->
+        <ng-sidebar [opened]="showSideBar">
+        
+        </ng-sidebar>
+
+        </ng-sidebar-container>
+    </div>
+    <div>
+        <h2 class="title">Catalogue</h2>
+        <div class="card-deck row d-flex justify-content-start ml-3 mt-4">
+            <app-card *ngFor="let product of products" [product]="product" ></app-card>
+        </div>
+    </div>
+</div>

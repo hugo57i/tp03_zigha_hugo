@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { SidebarModule } from 'ng-sidebar';
 
 import { AppComponent } from './app.component';
 import { TetiereComponent } from './tetiere/tetiere.component';
@@ -9,6 +12,16 @@ import { SaisieClientComponent } from './saisie-client/saisie-client.component';
 import { RecapitulatifDonneeComponent } from './recapitulatif-donnee/recapitulatif-donnee.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhonepipePipe } from './phonepipe.pipe';
+import { ProductService } from './product.service';
+import { ListeProduitComponent } from './liste-produit/liste-produit.component';
+import { CardComponent } from './card/card.component';
+
+const appRoutes: Routes = [
+  { path: 'createAccount', component: SaisieClientComponent },
+  { path: 'catalogue', component: ListeProduitComponent },
+  { path: '', redirectTo: 'catalogue', pathMatch: 'full' },
+  { path: '**', redirectTo: 'catalogue' }
+];
 
 @NgModule({
   declarations: [
@@ -17,14 +30,19 @@ import { PhonepipePipe } from './phonepipe.pipe';
     FooterComponent,
     SaisieClientComponent,
     RecapitulatifDonneeComponent,
-    PhonepipePipe
+    PhonepipePipe,
+    ListeProduitComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+    SidebarModule.forRoot()
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

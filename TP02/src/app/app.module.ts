@@ -15,6 +15,7 @@ import { PhonepipePipe } from './phonepipe.pipe';
 import { ProductService } from './product.service';
 import { ListeProduitComponent } from './liste-produit/liste-produit.component';
 import { CardComponent } from './card/card.component';
+import { SearchFilterComponent } from './search-filter/search-filter.component';
 
 const appRoutes: Routes = [
   { path: 'createAccount', component: SaisieClientComponent },
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     RecapitulatifDonneeComponent,
     PhonepipePipe,
     ListeProduitComponent,
-    CardComponent
+    CardComponent,
+    SearchFilterComponent
   ],
   imports: [
     BrowserModule,

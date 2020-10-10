@@ -12,6 +12,7 @@ export class ProductService {
 
 
   getAllProducts(): any {
-      return this.http.get('http://localhost:4200/assets/catalogue.json');
+      return this.http.get('/assets/catalogue.json');
+      
   }
 }
